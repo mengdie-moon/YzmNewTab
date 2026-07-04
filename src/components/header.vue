@@ -285,7 +285,10 @@ function handleMenuClick(index) {
     overflow: hidden;
     transition: all .3s ease;
     margin-left: 10px;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 70vh;
 }
 
 .panel-wrap {
@@ -415,6 +418,33 @@ function handleMenuClick(index) {
     }
 }
 
+
+@media screen and (max-width: 768px) {
+    .t-m-menu-l-item-name {
+        display: none;
+    }
+    .t-m-menu-l-user img{
+        width: 40px;
+        height: 40px;
+    }
+    .t-m-menu-left {
+        width: 10%;
+    }
+
+    .t-m-menu-l-item {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .t-m-menu-l-item-icon {
+        margin-right: 0;
+    }
+
+    .t-m-menu-l-item-icon img {
+        width: 22px;
+        height: 22px;
+    }
+}
 
 @media screen and (max-width: 480px) {
     .t-r-moreBtn {

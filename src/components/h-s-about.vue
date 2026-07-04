@@ -65,7 +65,7 @@ const ToGithub = () => {
 .about {
     width: 100%;
     margin-top: 10px;
-    height: 400px;
+    /* height: 10px; */
     display: flex;
     flex-direction: column;
     overflow: scroll;
