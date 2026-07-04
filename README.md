@@ -2,13 +2,6 @@
 
 一个现代化，个性化的浏览器新标签页
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <br />
 
 <p align="center">
@@ -32,6 +25,12 @@
 
 </p>
 
+---
+最后一次更新：2026-7-4-18：20
+更新内容:
+  1. 更新设置(关于部分)
+  2. 优化搜索
+  3. 细节微调
 ---
 
 作者：[Mengdie](https://github.com/mengdie-moon)

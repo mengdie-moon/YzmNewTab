@@ -234,12 +234,21 @@ const deleteSearchEngine = (index) => {
 const handleSearch = (event) => {
     event.preventDefault()
     if (!searchInput.value.trim()) return
+    let query = searchInput.value.trim()
     if (activeSuggestionIndex.value >= 0 && suggestions.value[activeSuggestionIndex.value]) {
-        searchInput.value = suggestions.value[activeSuggestionIndex.value]
+        query = suggestions.value[activeSuggestionIndex.value]
     }
-    const currentEngine = searchEngine.value[0] || searchEngineList.value[0]
-    const searchUrl = currentEngine.url + encodeURIComponent(searchInput.value)
-    window.open(searchUrl, '_blank')
+    if (isUrl(query)) {
+        let url = query
+        if (!/^https?:\/\//i.test(url)) {
+            url = 'https://' + url
+        }
+        window.open(url, '_blank')
+    } else {
+        const currentEngine = searchEngine.value[0] || searchEngineList.value[0]
+        const searchUrl = currentEngine.url + encodeURIComponent(query)
+        window.open(searchUrl, '_blank')
+    }
     showSuggestions.value = false
     suggestions.value = []
 }
@@ -322,6 +331,22 @@ const getCurrentEngineIcon = () => {
     const currentEngine = searchEngine.value[0]
     return currentEngine ? currentEngine.icon : bingIcon
 }
+
+const isUrl = (str) => {
+    if (!str || /\s/.test(str)) {
+        return false;
+    }
+    if (/^https?:\/\//i.test(str)) {
+        return true;
+    }
+    const domainPattern = /^[a-zA-Z0-9][-a-zA-Z0-9]*\.[a-zA-Z]{2,}(\/.*)?$/;
+    const ipOrLocalhostPattern = /^(localhost|(\d{1,3}\.){3}\d{1,3})(:\d+)?(\/.*)?$/;
+    if (domainPattern.test(str) || ipOrLocalhostPattern.test(str)) {
+        return true;
+    }
+    return false;
+}
+
 </script>
 
 <style scoped>
