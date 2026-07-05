@@ -26,12 +26,27 @@
 </p>
 
 ---
-最后一次更新：2026-7-4-18：20
+最新更新：2026-7-5-10:42
+更新内容:
+  1. 手机端480px以下的样式修复
+  2. ui细节微调
+
+上一次更新：2026-7-4-18:20
 更新内容:
   1. 更新设置(关于部分)
   2. 优化搜索
   3. 细节微调
   4. 修复手机端部分适配问题(7-4 23:49)
+---
+## 呜呜呜
+
+<a href="https://www.star-history.com/?repos=mengdie-moon%2FYzmNewTab.git&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=mengdie-moon/YzmNewTab.git&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=mengdie-moon/YzmNewTab.git&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=mengdie-moon/YzmNewTab.git&type=date&legend=top-left" />
+ </picture>
+</a>
 ---
 
 作者：[Mengdie](https://github.com/mengdie-moon)

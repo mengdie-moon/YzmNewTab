@@ -1,5 +1,5 @@
 <template>
-    <p class="copyright">© {{ getCurrentYear() }} YZM-NEWTab. <br /> <span class="sentence">{{ stence }}</span></p>
+    <p class="copyright">© {{ getCurrentYear() }} YZM-NEWTab. | <a class="copyright" href="https://icp.gov.moe/?keyword=20260350" target="_blank">萌ICP备20260350号</a><br /> <span class="sentence">{{ stence }}</span></p>
 </template>
 
 <script setup>
@@ -26,6 +26,7 @@ onMounted(() => {
     color: rgba(255, 255, 255, 0.6);
     font-size: 12px;
     margin: 0;
+    text-decoration: none;
 }
 
 .copyright:hover {

@@ -42,7 +42,6 @@
                                     <img src="../assets/common/cancel.svg" alt="">
                                 </div>
                             </div>
-
                         </div>
                         <div v-if="activeIndex === 2" class="panel style-panel">
                             <div class="t-m-m-r-header">
@@ -168,7 +167,7 @@ function handleMenuClick(index) {
     top: 50%;
     left: 50%;
     width: 90%;
-    padding: 20px;
+    padding: 13px;
     max-width: 1000px;
     height: auto;
     min-height: 50%;
@@ -277,13 +276,12 @@ function handleMenuClick(index) {
     background: #323232d9;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    margin: 10px 10px 10px 0;
     padding: 20px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     margin-left: 10px;
     overflow: scroll;
     overflow-y: auto;
@@ -423,10 +421,12 @@ function handleMenuClick(index) {
     .t-m-menu-l-item-name {
         display: none;
     }
-    .t-m-menu-l-user img{
+
+    .t-m-menu-l-user img {
         width: 40px;
         height: 40px;
     }
+
     .t-m-menu-left {
         width: 10%;
     }
@@ -456,9 +456,18 @@ function handleMenuClick(index) {
         padding: 8px;
     }
 
+    .t-m-menu-l-user img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .t-m-menu-l-item{
+        width: auto;
+    }
+
     .t-m-menu-l-item-icon img {
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
     }
 }
 </style>

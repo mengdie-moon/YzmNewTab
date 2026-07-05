@@ -9,7 +9,7 @@
             <div class="a-h-right">
                 <div class="a-h-r-h">
                     <div class="a-h-r-h-title">
-                        YZM-NewTab
+                        YzmNewTab
                     </div>
                     <div @click="ToQQGroup" class="a-h-r-h-qq">
                         <img src="../assets/common/s-qq.svg" alt="">
@@ -23,7 +23,7 @@
                         v1.1.0
                     </div>
                     <div class="a-h-r-desc-text">
-                        一个现代化，个性化的浏览器新标签页<br/>(Last Update: 2026.7.4 18:06)
+                        一个现代化，个性化的浏览器新标签页<br />(Last Update: 2026.7.4 18:06)
                     </div>
                     <div class="a-h-r-copying">
                         &copy; 2026 <a class="a-h-r-copying-a" href="http://newtab.linghantech.top/">YZM-NewTab</a>
@@ -57,7 +57,7 @@ const ToQQGroup = () => {
     window.open('https://qm.qq.com/cgi-bin/qm/qr?k=ZkL0KQJl79-J6t0vBq_9KmQPBB5o8uk6&jump_from=webapi&authKey=eTLaxTaf3RAcC44Qla3AMhauUocu5gCWaeJnN4OymwVb9xHO26+KJvKfPHDT2OL8')
 }
 const ToGithub = () => {
-    window.open('https://github.com/mengdie-moon/YZM-NewTab')
+    window.open('https://github.com/mengdie-moon/YzmNewTab')
 }
 </script>
 
@@ -374,8 +374,31 @@ const ToGithub = () => {
         align-items: center;
     }
 
+    .a-h-r-h-title{
+        font-size: 14px;
+    }
+
+    .a-h-r-version {
+        font-size: 13px;
+    }
+
+    .a-h-r-desc-text {
+        font-size: 11px;
+    }
+
+    .a-h-r-copying, .a-h-r-copying a{
+        font-size: 11px;
+    }
+
     .yzmnewtab h1 {
         font-size: 40px;
+    }
+
+    .a-h-r-h-qq img,
+    .a-h-r-h-github img {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
     }
 }
 </style>
