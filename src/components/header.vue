@@ -42,6 +42,7 @@
                                     <img src="../assets/common/cancel.svg" alt="">
                                 </div>
                             </div>
+                            <Search />
                         </div>
                         <div v-if="activeIndex === 2" class="panel style-panel">
                             <div class="t-m-m-r-header">
@@ -50,7 +51,6 @@
                                     <img src="../assets/common/cancel.svg" alt="">
                                 </div>
                             </div>
-
                         </div>
                         <div v-if="activeIndex === 3" class="panel about-panel">
                             <div class="t-m-m-r-header">
@@ -71,15 +71,35 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+import { useThemeStore } from '../stores/theme'
 import Msg from '../components/msg.vue'
 import CommonIcon from '../assets/common/s-common.svg'
 import PenIcon from '../assets/common/s-pen.svg'
 import SearchIcon from '../assets/common/s-search.svg'
 import AboutIcon from '../assets/common/s-about.svg'
 import About from '../components/h-s-about.vue'
-const isShowMore = ref(false)
+import Search from '../components/h-s-search.vue'
+
+const themeStore = useThemeStore()
 const msgRef = ref(null)
-const activeIndex = ref(0)
+const isShowMore = computed({
+    get: () => themeStore.showSettingsPanel,
+    set: (value) => {
+        if (value) {
+            themeStore.openSettingsPanel(themeStore.settingsActiveTab)
+        } else {
+            themeStore.closeSettingsPanel()
+        }
+    }
+})
+
+const activeIndex = computed({
+    get: () => themeStore.settingsActiveTab,
+    set: (value) => {
+        themeStore.settingsActiveTab = value
+    }
+})
+
 const prevIndex = ref(0)
 const moreLeft = [
     {

@@ -97,7 +97,7 @@ defineExpose({
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 9999;
+    z-index: 999999999999;
     width: 100%;
     max-width: 400px;
     pointer-events: none;

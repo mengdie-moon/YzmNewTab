@@ -35,7 +35,7 @@
                     <img src="../assets/common/cancel.svg" alt="">
                 </div>
             </div>
-            <div class="search-engine-item search-engine-add">
+            <div class="search-engine-item search-engine-add" @click="handleAddEngine">
                 <div class="search-engine-item-icon">
                     <img src="../assets/common/add.svg" alt="">
                 </div>
@@ -50,11 +50,14 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { useThemeStore } from '../stores/theme'
 import Msg from '../components/msg.vue'
 import baiduIcon from '../assets/searchengine/baidu.svg'
 import googleIcon from '../assets/searchengine/google.svg'
 import bingIcon from '../assets/searchengine/bing.svg'
 import sougouIcon from '../assets/searchengine/sougou.svg'
+
+const themeStore = useThemeStore()
 
 const msgRef = ref(null)
 const isSearchengine = ref(false)
@@ -68,6 +71,11 @@ let scriptElement = null
 
 const showSearhEngine = () => {
     isSearchengine.value = !isSearchengine.value
+}
+
+const handleAddEngine = () => {
+    isSearchengine.value = false
+    themeStore.openSettingsPanel(1)
 }
 
 const defaultSearchEngineList = [
